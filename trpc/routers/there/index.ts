@@ -29,6 +29,7 @@ const TRACKING_PARAMS = new Set([
   // Twitter
   'twclid',
   // Instagram
+  'igsh',
   'igshid',
   // TikTok
   'ttclid',
