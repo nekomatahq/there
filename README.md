@@ -20,4 +20,4 @@ bun dev
 
 Paste a URL. Get it clean.
 
-Part of [Nekomata Suite tools](https://nekomata.dev).
+Part of [Nekomata Suite tools](#).
