@@ -32,6 +32,8 @@ const TRACKING_PARAMS = new Set([
   'igshid',
   // TikTok
   'ttclid',
+  // YouTube
+  'feature',
   // Mailchimp
   'mc_eid',
   'mc_cid',
