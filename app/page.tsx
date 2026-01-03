@@ -97,7 +97,9 @@ export default function Home() {
           <Link href="/terms" className="hover:text-foreground transition-colors duration-300">terms</Link>
         </div>
         <div>
-          Nekomata Suite tools / ネコマタ
+          <a href="https://github.com/nekomatahq" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors duration-300">
+            Nekomata Suite tools / ネコマタ
+          </a>
         </div>
       </footer>
     </main>
