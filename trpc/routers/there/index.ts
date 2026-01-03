@@ -24,6 +24,15 @@ const TRACKING_PARAMS = new Set([
   '_ga',
   '_gl',
   '_gac',
+  // Google DoubleClick
+  'gdfms',
+  'gdftrk',
+  'gdffi',
+  // Adobe
+  '_bta_tid',
+  '_bta_c',
+  // Klaviyo
+  '_ke',
   // Microsoft/Bing
   'msclkid',
   // Twitter
@@ -31,6 +40,7 @@ const TRACKING_PARAMS = new Set([
   // Instagram
   'igsh',
   'igshid',
+  'si',
   // TikTok
   'ttclid',
   // YouTube
@@ -48,6 +58,7 @@ const TRACKING_PARAMS = new Set([
   'ref_url',
   'source',
   'campaign',
+  'campaign_id',
   // Yahoo
   'yclid',
   // Affiliate
@@ -58,6 +69,26 @@ const TRACKING_PARAMS = new Set([
   's_kwcid',
   'trk',
   'tracking',
+  // Branch
+  '_branch_match_id',
+  'mkevt',
+  'mkcid',
+  'mkrid',
+  'campid',
+  'toolid',
+  'customid',
+  // Other tracking
+  'sb_referer_host',
+  'mkwid',
+  'pcrid',
+  'ef_id',
+  'dm_i',
+  'epik',
+  'hootpostid',
+  'wprov',
+  '__s',
+  'wt.mc_id',
+  'wt.nav',
 ]);
 
 function stripTrackingParams(url: URL): URL {
@@ -71,7 +102,15 @@ function stripTrackingParams(url: URL): URL {
       lowerKey.startsWith('utm_') ||
       lowerKey.startsWith('fb_') ||
       lowerKey.startsWith('mc_') ||
-      lowerKey.startsWith('_hs')
+      lowerKey.startsWith('_hs') ||
+      lowerKey.startsWith('trk_') ||
+      lowerKey.startsWith('pk_') ||
+      lowerKey.startsWith('piwik_') ||
+      lowerKey.startsWith('mtm_') ||
+      lowerKey.startsWith('matomo_') ||
+      lowerKey.startsWith('hsa_') ||
+      lowerKey.startsWith('igsh') ||
+      lowerKey.startsWith('sms_')
     ) {
       paramsToDelete.push(key);
     }
